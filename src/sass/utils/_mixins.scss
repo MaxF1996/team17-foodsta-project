@@ -1,4 +1,12 @@
+@mixin set-font($size, $fh) {
+  // для роозмірів шрифтів яких нема в плейсхолдерах
+  font-size: $size;
+  // $fh - висота тексту (line-height) в пікселях
+  line-height: calc($fh / $size);
+}
+
 @mixin primary-button($padding) {
+  // зелена кнопка
   padding: $padding;
 
   background-color: $button-green;
@@ -21,6 +29,7 @@
 }
 
 @mixin secondary-button($padding) {
+  // біла кнопка з зеленим борддером
   padding: $padding;
 
   background-color: $white;
@@ -61,36 +70,5 @@
   &:hover,
   &:focus {
     background-color: $yellow-main;
-  }
-}
-
-//  screen breakpointer
-@mixin mobile {
-  @media screen and (min-width: $mobile) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (min-width: $tablet) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
-    @content;
-  }
-}
-
-@mixin max-width ($width) {
-  @media screen and (max-width: $width) {
-    @content;
-  }
-}
-
-@mixin min-max-width ($min-width, $max-width) {
-  @media screen and (min-width: $min-width) and (max-width: $max-width) {
-    @content;
   }
 }
