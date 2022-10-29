@@ -4,6 +4,7 @@
   background-size: cover;
   height: auto;
   width: 100%;
+  padding-bottom: 100px;
 
   &--flex {
    @media (min-width:1280px) {
@@ -24,6 +25,8 @@
 }
 
 @media (min-width:$desktop) {
+   padding-top: 0;
+   padding-bottom: 0;
    background-image: url('../images/offerings/rectangle_1280.png');
 }
 
@@ -45,6 +48,7 @@
     }
 
      @media (min-width: 1280px) {
+      margin-top: 125px;
       width: 500px;
     }
   }
@@ -67,6 +71,7 @@
   &__text-primary {
    @media (min-width:768px) {
       font-size: 16px;
+      line-height: 1.19;
      }
 
      @media (min-width:1280px){
@@ -76,7 +81,11 @@
 
   &__text-secondary {
       @media (min-width:768px) {
-      font-size: 16px;
+      font-size: 14px;
+     }
+
+     @media (min-width:1200px) {
+      line-height: 1.5;
      }
      }
 
