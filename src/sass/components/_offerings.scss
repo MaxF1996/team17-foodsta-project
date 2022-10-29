@@ -1,10 +1,30 @@
 .offerings {
   background-image: url('../images/offerings/rectangle_320.png');
   background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+ 
+@media (min-width:$mobile) {
+   background-image: url('../images/offerings/rectangle_480.png');  
+}
+
+@media (min-width:$tablet) {
+   padding-left: 0;
+   padding-right: 0;
+   background-image: url('../images/offerings/rectangle_768.png');
+}
+
+@media (min-width:$desktop) {
+   background-image: url('../images/offerings/rectangle_1280.png');
+}
 
   &__img {
     margin-top: -50px;
     margin-bottom: 60px;
+
+    @media (min-width:768px) {
+     margin-top: 150px;
+    }
   }
 
   &__label {
@@ -18,6 +38,17 @@
     line-height: 1.18;
     color: $custom-black;
     text-transform: capitalize;
+
+      @media (min-width:768px) {
+      font-size: 42px;
+      line-height: 1.17;
+     }
+  }
+
+  &__text {
+   @media (min-width:768px) {
+      font-size: 17px;
+     }
   }
 
   &__features {
@@ -33,7 +64,8 @@
   }
 
   &__btn-commons {
-    @include flex-container(flex, center, space-between, null, null);
+    @include flex-container(flex, center, center, null, null);
+    gap: 24px;
   }
 
   &__btn {
@@ -62,7 +94,7 @@
   }
 }
 
-@media (min-width: $tablet) and (max-width: 1199px) {
+@media (min-width: $tablet) and (max-width: 1279px) {
   .apple-md {
     display: none;
   }
