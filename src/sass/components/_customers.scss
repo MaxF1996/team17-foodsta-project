@@ -1,4 +1,67 @@
-.title-customers {
+
+.title_customers {
+    
+    font-size: 28px;
+    line-height: 1.17;
+    font-weight: 700;
+
+    color: $custom-black;
+
+   @include tablet {
     font-size: 42px;
+    line-height: 1.16;
+   }
+}
+.paragraf_customers {
+    margin-top: 20px;
+}
+
+.reviews_paragraf {
+font-weight: 700;
+font-size: 16px;
+line-height: 1.1875;
+
+color: $custom-black;
+
+@include tablet{
+    font-size: 18px;
+    line-height: 1.16;
 
 }
+}
+
+.about {
+  
+    border-right: 0.854167px solid #7EB101;
+}
+
+.about_name {
+font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5; 
+    color: $custom-black;
+
+ @include desktop {
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+}
+.about_nick {
+  
+        font-size: 14px;
+        line-height: 1.5;
+        color: $custom-black;
+}
+.reviews_icon{
+    display: flex;
+    flex-direction: row;
+}
+.reviews_svg {
+    margin-right: 4px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+   
