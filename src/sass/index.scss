@@ -1,16 +1,27 @@
+// скидання
+
+@import './utils/my-reset';
+
+// брейпоїнти й перемінні
+
 @import './utils/breakpoints';
 @import './utils/vars';
 
+// міксіни плейсхолдери
+
 @import './utils/mixins';
 @import './utils/placeholders';
-@import './utils/my-reset';
+
+// загальні стилі
 
 @import './common';
+
+// лейаути для флекс/грід контейнерів
 
 @import './layouts/flex';
 @import './layouts/grid';
 
-//
+// паршали
 
 @import './components/header';
 @import './components/logo';
