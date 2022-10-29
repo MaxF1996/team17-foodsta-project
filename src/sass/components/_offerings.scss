@@ -3,6 +3,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
+  width: 100%;
+
+  &--flex {
+   @media (min-width:1280px) {
+      @include flex-container(row, center, start, null, null);
+      flex-flow: nowrap;
+      gap: 90px;
+   }
+  }
  
 @media (min-width:$mobile) {
    background-image: url('../images/offerings/rectangle_480.png');  
@@ -29,6 +38,15 @@
 
   &__label {
     margin-bottom: 28px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+      width: 526px;
+    }
+
+     @media (min-width: 1280px) {
+      width: 500px;
+    }
   }
 
   &__title {
@@ -40,19 +58,48 @@
     text-transform: capitalize;
 
       @media (min-width:768px) {
+      margin-bottom: 20px;
       font-size: 42px;
       line-height: 1.17;
      }
   }
 
-  &__text {
+  &__text-primary {
    @media (min-width:768px) {
-      font-size: 17px;
+      font-size: 16px;
      }
+
+     @media (min-width:1280px){
+      line-height: 1.5;
+     }
+  }
+
+  &__text-secondary {
+      @media (min-width:768px) {
+      font-size: 16px;
+     }
+     }
+
+  &__tb {
+   @media (min-width:768px) {
+      margin-bottom: 40px;
+       @include flex-container(row, center, start, null, null);
+    gap: 116px;
+    flex-flow: nowrap;
+   }
+
+    @media (min-width: 1280px) {
+      margin-bottom: 32px;
+      gap: 67px;
+    }
   }
 
   &__features {
     margin-bottom: 28px;
+
+    @media (min-width:768px) {
+      width: 252px;
+     }
   }
 
   &__title-icon {
@@ -64,7 +111,7 @@
   }
 
   &__btn-commons {
-    @include flex-container(flex, center, center, null, null);
+    @include flex-container(row, center, start, null, null);
     gap: 24px;
   }
 
@@ -73,7 +120,7 @@
   }
 
   &__link {
-    @include flex-container(flex, center, center, null, null);
+    @include flex-container(row, center, center, null, null);
     gap: 4px;
     font-weight: 400;
     font-size: 14px;
@@ -81,9 +128,6 @@
     color: $black;
   }
 
-  &__arrow-right {
-    display: inline;
-  }
 }
 
 // Turn off images of Apples for different devices
