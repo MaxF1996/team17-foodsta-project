@@ -1,5 +1,33 @@
-<section>Subscribe</section>
-<div>
-  <form action="mail">підпишіться на канал</form>
-  <input type="mail" />
-</div>
+<section class="container">
+  <div class="subscribe">
+    <picture class="subscribe__picture">
+      <source
+        srcset="./images/banan-mob.png 1x, ./images/banan-mob@2x.png 2x"
+      />
+      <img src="./images/banan-mob.png" alt="banan" />
+    </picture>
+
+    <h2 class="subscribe__header">Subscribe To Get Special Offers</h2>
+    <p class="subscribe__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="subscribe__form">
+      <label for="mail" class="subscribe__label"> </label>
+      <input
+        type="mail"
+        name="mail"
+        id="mail"
+        placeholder="Enter your email"
+        class="subscribe__input"
+      />
+
+      <button type="submit" class="subscribe__button">Subscribe</button>
+    </form>
+    <!-- <p class=subscribe__text">
+                  By subscribing you agree to with our 
+                  <a href="./index.html" class="subscribe__link">Privacy Policy</a>
+                </p>
+                <p class=subscribe__text subscribe__text--end > 2022 FoodSta. All right reserved.</p> -->
+  </div>
+</section>
