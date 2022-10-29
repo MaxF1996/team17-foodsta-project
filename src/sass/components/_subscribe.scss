@@ -4,29 +4,68 @@
 
 .subscribe{
     background-color: white;
-    &__picture{
-        display: block;
-        margin-bottom: 17px;
+    
+        @include mobile{
+        background-color: red;
     }
+
+    @include tablet{ background-color: palevioletred;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @include desktop{
+        background-color: lightskyblue;
+    }
+ &__picture {
+     
+         display: block;
+         margin-bottom: 17px;
+     
+         @include tablet {
+            margin-left: auto;
+         }
+    
+         @include desktop {}
+        }
 &__header{
 font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    line-height: 120%;
+    line-height: 1.2;
     margin-bottom: 20px;
+    @include tablet {
+        font-size: 42px;
+        line-height: 1.2;
+        margin-right: auto;
+    }
+    
+        @include desktop {}
 }
 &__text{
     font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 1.14;
     color: #2C2C2C;
     margin-bottom: 40px;
+    @include tablet {
+        font-size: 16px;
+        margin-right: auto;
+    }
+    
+        @include desktop {}
 }
 &__form{
     width: 100%;
+    @include tablet {
+        display: flex;
+    }
+    
+        @include desktop {}
 }
 &__input{
     width: 100%;
@@ -35,6 +74,11 @@ padding: 12px;
 border-radius:30px;
 border: 0.85px solid rgba(255, 229, 80, 1);
 margin-bottom: 20px;
+@include tablet {
+    width: 395px;
+}
+
+    @include desktop {}
 }
 &__button{
     height: 42px;
@@ -44,8 +88,16 @@ margin-bottom: 20px;
      margin-left: auto;
      margin-bottom: 40px;
      padding: 11px 22px;
+    @include tablet {
+        margin-left: 22px;
+    }
+    
+        @include desktop {}
 }
 &__link{
     color: green;
+    @include tablet {}
+    
+        @include desktop {}
 }
 }
