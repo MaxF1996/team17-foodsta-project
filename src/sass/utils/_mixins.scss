@@ -1,0 +1,65 @@
+@mixin primary-button($padding) {
+  padding: $padding;
+
+  background-color: $button-green;
+  border-radius: 30px;
+
+  color: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  @media screen and (min-width: $desktop) {
+    transition: background-color $main-transition;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $button-green-light;
+  }
+}
+
+@mixin secondary-button($padding) {
+  padding: $padding;
+
+  background-color: $white;
+  border: 2px solid $dark-green;
+  border-radius: 30px;
+
+  color: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5384;
+
+  transition: border-color $main-transition;
+
+  &:hover,
+  &:focus {
+    border-color: $button-green-dark;
+  }
+}
+
+@mixin footer-button($padding) {
+  padding: $padding;
+
+  background-color: $white;
+  border: 1px solid $accent-color;
+  border-radius: 30px;
+
+  color: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5384;
+
+  @media screen and (min-width: $desktop) {
+    transition: background-color $main-transition;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-main;
+  }
+}
