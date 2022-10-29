@@ -1,0 +1,53 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    height: 72px;
+
+    @include max-width (767px) {
+        justify-content: space-between;
+    }
+}
+
+.header-button {
+    @include primary-button (6 18);
+}
+
+.header__nav {
+    margin-right: 30px;
+}
+
+.nav {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.nav__list {
+    @include tablet {
+        display: flex;
+    }
+
+}
+
+.nav__item {
+    &:not(:last-child) {
+        margin-right: 28px;
+    }
+}
+
+.nav__link {
+    color: $black;
+
+    @include max-width (767px) {
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.17;
+    }
+
+}

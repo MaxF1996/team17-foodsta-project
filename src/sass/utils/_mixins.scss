@@ -63,3 +63,34 @@
     background-color: $yellow-main;
   }
 }
+
+//  screen breakpointer
+@mixin mobile {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin max-width ($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-max-width ($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+.header__logo {
+    @include min-max-width (768px, 1279px) {
+        margin-right: 191px;
+    }
+
+    @include desktop {
+        margin-right: 735px;
+    }
+}
