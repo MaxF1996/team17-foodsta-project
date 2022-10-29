@@ -1,6 +1,8 @@
 
-.title_customers {
+.section-background {
     
+}
+.title_customers {
     font-size: 28px;
     line-height: 1.17;
     font-weight: 700;
@@ -12,6 +14,7 @@
     line-height: 1.16;
    }
 }
+
 .paragraf_customers {
     margin-top: 20px;
 }
@@ -26,10 +29,14 @@ color: $custom-black;
 @include tablet{
     font-size: 18px;
     line-height: 1.16;
+    
 
 }
 }
-
+.img {
+    width: 48px;
+    height: 48px;
+}
 .about {
   
     border-right: 0.854167px solid #7EB101;
