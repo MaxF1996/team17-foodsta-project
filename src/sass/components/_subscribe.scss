@@ -2,121 +2,133 @@
 //     outline: 1px solid tomato;
 // }
 
+.subscribe {
+  background-color: $main-bg-color;
 
+  @include mobile {
+  }
 
-.subscribe{
-    background-color: white;
-    
-        @include mobile{
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+  &__box {
+    margin-left: auto;
+    @include tablet {
     }
 
-    @include tablet{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    @include desktop {
     }
-    @include desktop{
-        flex-direction: row-reverse;
-    }
-    &__box{
-        margin-left: auto;
-            @include tablet {}
-            
-                @include desktop {}
+  }
+  &__picture {
+    display: block;
+    margin-bottom: 17px;
 
+    @include tablet {
+      margin-left: auto;
     }
- &__picture {
-     
-         display: block;
-         margin-bottom: 17px;
-     
-         @include tablet {
-            margin-left: auto;
-         }
-    
-         @include desktop {}
-        }
-&__header{
-font-family: 'Roboto';
+
+    @include desktop {
+    }
+  }
+  &__header {
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2;
     margin-bottom: 20px;
     @include tablet {
-        font-size: 42px;
-        line-height: 1.2;
-        margin-right: auto;
+      font-size: 42px;
+      line-height: 1.2;
+      margin-right: auto;
     }
-    
-        @include desktop {}
-}
-&__text{
+
+    @include desktop {
+    }
+  }
+  &__text {
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.14;
-    color: #2C2C2C;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $custom-black;
     margin-bottom: 40px;
     @include tablet {
-        font-size: 16px;
-        margin-right: auto;
+      font-size: 16px;
+      margin-right: auto;
     }
-    
-        @include desktop {}
-}
-&__form{
+
+    @include desktop {
+    }
+  }
+  &__form {
     width: 100%;
     @include tablet {
-        display: flex;
+      display: flex;
     }
-    
-        @include desktop {}
-}
-&__input:placeholder-shown{
-   
-    border: 0.85px solid rgba(255, 229, 80, 1);
 
-}
-&__input:invalid {
-    border: 0.85px solid rgba(255, 112, 93, 1);
+    @include desktop {
+    }
+  }
+  &__input:placeholder-shown {
+    border: 0.85px solid $yellow-main;
+  }
+  &__input:invalid {
+    border: 0.85px solid $alarm-color;
+  }
 
-}
-
-&__input{
+  &__input {
     outline: none;
     width: 100%;
-height: 42px;
-padding: 12px;
-border-radius:30px;
-border: 0.85px solid rgba(126, 177, 1, 1);
-margin-bottom: 20px;
-@include tablet {
-    width: 395px;
-}
-    @include desktop {}
-}
-&__button{
+    height: 42px;
+    padding: 12px;
+    border-radius: 30px;
+    border: 0.85px solid $button-green-dark;
+    margin-bottom: 20px;
+    @include tablet {
+      width: 395px;
+    }
+    @include desktop {
+    }
+  }
+
+  &__button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
     height: 42px;
     border-radius: 30px;
-    background-color:
-     rgba(187, 243, 48, 1);
-     margin-left: auto;
-     margin-bottom: 40px;
-     padding: 11px 22px;
+    background-color: $button-green;
+    margin-left: auto;
+    margin-bottom: 60px;
+    padding: 11px 22px;
     @include tablet {
-        margin-left: 22px;
-        margin-bottom: 0;
+      margin-left: 22px;
+      margin-bottom: 0;
     }
-    
-        @include desktop {}
-}
-&__link{
-    color: green;
-    @include tablet {}
-    
-        @include desktop {}
-}
+
+    @include desktop {
+    }
+  }
+  &__button:hover,
+  &__button:focus {
+    background-color: $button-green-light;
+  }
+  &__link {
+    color: $button-green-dark;
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
 }
