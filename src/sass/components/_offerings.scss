@@ -1,57 +1,75 @@
 .offerings {
-   background-image: url("../images/offerings/rectangle_320.png");
-   background-repeat: no-repeat;
+  background-image: url('../images/offerings/rectangle_320.png');
+  background-repeat: no-repeat;
 
-   &__img {
-      margin-top: -50px;
-      margin-bottom: 60px;
-   }
+  &__img {
+    margin-top: -50px;
+    margin-bottom: 60px;
+  }
 
-   &__label {
-      margin-bottom: 28px;
-   }
+  &__label {
+    margin-bottom: 28px;
+  }
 
-   &__title {
-      margin-bottom: 28px;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1.18;
-      color: $custom-black;
-      text-transform: capitalize;
-   }
+  &__title {
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    color: $custom-black;
+    text-transform: capitalize;
+  }
 
-   &__features {
-      margin-bottom: 28px;
-   }
+  &__features {
+    margin-bottom: 28px;
+  }
 
-   &__title-icon {
-      margin-top: 8px;
-      margin-bottom: 16px;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 1.17;
-   }
+  &__title-icon {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+  }
 
-   // *decoration button "Order now"
+  &__btn-commons {
+    @include flex-container(flex, center, space-between, null, null);
+  }
 
-   &__btn-commons {
-      @include flex-container(flex, center, space-between, null, null);
-   }
+  &__btn {
+    @include secondary-button(10px 22px);
+  }
 
-   &__btn {
-      @include secondary-button(10px 22px);
-   }
+  &__link {
+    @include flex-container(flex, center, center, null, null);
+    gap: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $black;
+  }
 
-   &__link {
-      @include flex-container(flex, center, center, null, null);
-      gap: 4px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.43;
-      color: $black;
-   }
+  &__arrow-right {
+    display: inline;
+  }
+}
 
-   &__arrow-right {
-      display: inline;
-   }
+// Turn off images of Apples for different devices
+
+@media (max-width: 767px) {
+  .apple-tab {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: 1199px) {
+  .apple-md {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .apple-tab {
+    display: none;
+  }
 }
