@@ -1,4 +1,12 @@
+@mixin set-font($size, $fh) {
+  // для роозмірів шрифтів яких нема в плейсхолдерах
+  font-size: $size;
+  // $fh - висота тексту (line-height) в пікселях
+  line-height: calc($fh / $size);
+}
+
 @mixin primary-button($padding) {
+  // зелена кнопка
   padding: $padding;
 
   background-color: $button-green;
@@ -21,6 +29,7 @@
 }
 
 @mixin secondary-button($padding) {
+  // біла кнопка з зеленим борддером
   padding: $padding;
 
   background-color: $white;
