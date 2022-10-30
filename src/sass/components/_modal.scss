@@ -7,7 +7,7 @@
 
     width: 100vw;
     height: 100vh;
-    transform: scaleY(1);
+    transform: scaleY(1); // Change to '0' in the final version !!!!!!!!
 
     background-color: $backdrop-color;
 
@@ -227,7 +227,7 @@
     transition: opacity $modal-transition;
 
     &::after {
-        content: url("../../img/button-warning-tail.svg");
+        content: url("../images/button-warning-tail.svg");
 
         position: absolute;
         bottom: 1px;
