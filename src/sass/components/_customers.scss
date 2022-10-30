@@ -27,6 +27,13 @@
     padding-bottom: 200px;
         }
     } 
+    .container {
+        @media screen and (min-width:$tablet){
+    margin-left: auto;
+    margin-right: auto; 
+        }
+      
+    }
 
 .title_customers {
     font-size: 28px;
@@ -46,10 +53,10 @@
     margin-bottom: 32px;
 }
 
-.reviews_list {
+.reviews_first {
     @media screen and (min-width:$tablet) {
             display: flex;
-            flex-direction: row; 
+            flex-direction: row;
         }
 }
 
@@ -61,17 +68,42 @@
     border-top-right-radius: 10%;
     padding: 8px;
     width: 280px;
-    height: 228px;
+    
 
     @media screen and (min-width:$tablet){
     padding: 12px;
     margin-right: 32px;
+    width: 336px;
+    height: 244px;
+    margin-bottom: 0;
     
     }
 
      @media screen and (min-width:$desktop){
         padding: 14px;
-     }
+        width: 501px;
+        height: 227px;
+        margin-right: 139px;
+        margin-bottom: 0;
+
+        &:last-child{
+        margin-right: 0;
+        }
+       
+        }
+     }    
+
+.reviews_icon {
+    display: flex;
+    flex-direction: row;
+}
+
+.reviews_svg {
+    margin-right: 4px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .reviews_paragraf {
@@ -97,10 +129,11 @@ line-height: 1.16;
 .people_img {
     width: 48px;
     height: 48px;
+    margin-right: 16px;
 }
 .about {
-  
     border-right: 0.854167px solid #7EB101;
+    padding-right: 15px;
 }
 
 .about_name {
@@ -120,16 +153,4 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         line-height: 1.5;
         color: $custom-black;
 }
-.reviews_icon{
-    display: flex;
-    flex-direction: row;
-}
-.reviews_svg {
-    margin-right: 4px;
-
-    &:last-child {
-        margin-right: 0;
-    }
-}
-
    
