@@ -6,14 +6,13 @@
 text-align: center;
 }
 .favorites__title {
-//     font-size: 28px;
-//     line-height: 1.178;
-//     @media screen and (min-width: $tablet) {
-//     font-size: 42px;
-//     line-height: 1.16;
-//     }
-// }
-    extend
+    font-size: 28px;
+    line-height: 1.178;
+    @media screen and (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 1.16;
+    }
+}
 .favorites__text {
     margin-bottom: 60px;
 
