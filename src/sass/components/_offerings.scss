@@ -6,14 +6,6 @@
   width: 100%;
   padding-bottom: 100px;
 
-  &--flex {
-   @media (min-width:1280px) {
-      @include flex-container(row, center, start, null, null);
-      flex-flow: nowrap;
-      gap: 90px;
-   }
-  }
- 
 @media (min-width:$mobile) {
    background-image: url('../images/offerings/rectangle_480.png');  
 }
@@ -29,6 +21,14 @@
    padding-bottom: 0;
    background-image: url('../images/offerings/rectangle_1280.png');
 }
+
+&--flex {
+   @media (min-width:1280px) {
+      @include flex-container(row, center, start, null, null);
+      flex-flow: nowrap;
+      gap: 90px;
+   }
+  }
 
   &__img {
     margin-top: -50px;
