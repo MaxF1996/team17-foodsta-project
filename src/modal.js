@@ -13,7 +13,7 @@
 
     // "Open modal" buttons
     refs.modalContainerOpen.forEach( btn => {
-        btn.addEventListener("click", ()=> {
+        btn.addEventListener("click", () => {
             refs.modalContainer.style.transform = "scaleY(1)";
         });
     });
@@ -23,14 +23,14 @@
         refs.modalContainer.style.transform = "scaleY(0)";
     });
 
-    // Close modal after a successfull submit
     // !!!!! WIP !!!!!
-    refs.modal.addEventListener("submit", () => {
-        refs.modalContainer.style.transform = "scaleY(0)";
-    });
+    // Close modal after a successfull submit
+    // refs.modal.addEventListener("submit", () => {
+    //     refs.modalContainer.style.transform = "scaleY(0)";
+    // });
 
 
-    // Change of modal alarm messages visibility (change of messages, the "invisible" class)
+    // Change of modal alarm messages visibility (change of messages, the "invisible" class)  
     // Invalid submit
     refs.modal.addEventListener("invalid", (e) => {
         e.preventDefault;
@@ -42,7 +42,7 @@
 
     // The change of messages back after a click on the fieldset inputs
     refs.fSet.addEventListener("click", () => { msgChanger(refs.warningMessages, "invisible", true) });
-    
+
     // A function that changes messages, if a visibility condition is met
     function msgChanger(msgList, classToToggle, classIsInSelectorReq) {
         if (classIsInSelectorReq === msgList[0].classList.contains(classToToggle)) {
