@@ -39,15 +39,14 @@ text-align: center;
     width: 280px;
     height: 280px;
 
-    border: 11px solid #FFE550;
+    border: 11px solid $yellow-main;
     border-radius: 139.305px;
-
 
     @media screen and (min-width: $tablet) {
     width: 336px;
     height: 336px;
 
-    border: 14px solid #FFE550;
+    border: 14px solid $yellow-main;
     border-radius: 167.59px;
     }
 
@@ -55,16 +54,22 @@ text-align: center;
     width: 395px;
     height: 395px;
 
-    border: 16px solid #FFE550;
+    border: 16px solid $yellow-main;
     border-radius: 197.5px;
+    }
+    &:hover, &:focus {
+        border-color: $button-green;
     }
 }
 .favorites-set__item {
-    // outline: 1px solid teal;
+    outline: 1px solid teal;
 
     @media screen and (max-width: calc($tablet - 1px)) {
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+        &:nth-child(n + 4) {
+        display: none;
         }
     }
     @media screen and (min-width: $tablet) {
