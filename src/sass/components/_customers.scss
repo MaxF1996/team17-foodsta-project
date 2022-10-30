@@ -2,7 +2,6 @@
 .background {
     background-image: url("../images/customers_mob_1x_320.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-size: 100% 100%;
     
     
@@ -23,14 +22,7 @@
     padding-bottom: 200px;
         }
     } 
-    .container {
-        @media screen and (min-width:$tablet){
-    margin-left: auto;
-    margin-right: auto; 
-        }
-      
-    }
-
+    
 .title_customers {
     font-size: 28px;
     line-height: 1.17;
@@ -58,7 +50,6 @@
     @media screen and (min-width:$tablet) {
             display: flex;
             flex-direction: row;
-           
         }
 }
 
@@ -67,17 +58,10 @@
     margin-bottom: 24px;
     border-radius: 0px 30px 30px 30px;
     padding: 8px;
-    width: 280px;
-   
-
+    
      &:nth-child(2n) {
         margin-bottom: 0;
      }
-
-    @media screen and (min-width:$mobile){
-    
-        
-    }
 
     @media screen and (min-width:$tablet){
     padding: 12px;
@@ -99,7 +83,6 @@
         &:last-child{
         margin-right: 0;
         }
-       
         }
      }    
 
@@ -141,6 +124,7 @@ line-height: 1.16;
     height: 48px;
     margin-right: 16px;
 }
+
 .about {
     border-right: 0.854167px solid #7EB101;
     padding-right: 15px;
@@ -155,8 +139,8 @@ font-weight: 500;
  @include desktop {
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 }
+
 .about_nick {
   
         font-size: 14px;
