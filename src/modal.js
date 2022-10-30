@@ -23,12 +23,6 @@
         refs.modalContainer.style.transform = "scaleY(0)";
     });
 
-    // !!!!! WIP !!!!!
-    // Close modal after a successfull submit
-    // refs.modal.addEventListener("submit", () => {
-    //     refs.modalContainer.style.transform = "scaleY(0)";
-    // });
-
 
     // Change of modal alarm messages visibility (change of messages, the "invisible" class)  
     // Invalid submit
