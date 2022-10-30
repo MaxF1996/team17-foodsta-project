@@ -26,6 +26,7 @@ body {
 
   @include max-width (767px) {
     position: relative;
+
   }
 
   @media screen and (min-width: $tablet) {
