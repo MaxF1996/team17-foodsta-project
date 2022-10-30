@@ -1,7 +1,21 @@
 
-.section-background {
+.background {
+    background-image: url("./images/customers/customers_mob_1x_320.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
     
-}
+    
+    @media screen and (min-width: $desktop) {
+    background-image: url("./images/customers/customers-desk-1x-1280.png");
+    padding-top: 0;
+    padding-bottom: 0;
+        }
+    }
+
+
+
 .title_customers {
     font-size: 28px;
     line-height: 1.17;
