@@ -1,53 +1,140 @@
-.header__container {
-    display: flex;
-    align-items: center;
-    height: 72px;
+.header {
 
-    @include max-width (767px) {
-        justify-content: space-between;
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 72px;
+
+        @include max-width (767px) {
+            justify-content: space-between;
+        }
     }
+
+    &__button {
+        display: none;
+
+        @include tablet {
+            display: block;
+            @include primary-button (6 18);
+
+        }
+
+    }
+
+    &__nav {
+        @include tablet {
+            margin-right: 30px;
+        }
+    }
+
 }
 
-.header-button {
-    @include primary-button (6 18);
-}
-
-.header__nav {
-    margin-right: 30px;
-}
 
 .nav {
-    display: none;
-
-    @include tablet {
-        display: block;
+    @include max-width (767px) {
+        width: 100%;
     }
+
+
+    &__list {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__item {
+
+        @include max-width (767px) {}
+
+        @include tablet {
+            &:not(:last-child) {
+                margin-right: 28px;
+            }
+        }
+    }
+
+    &__link {
+        color: $black;
+        @extend %menu-header-links;
+
+        @include max-width (767px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 16px 16px;
+
+            &:hover,
+            &:focus {
+                background-color: $button-green;
+            }
+        }
+    }
+
 }
 
-.nav__list {
+.menu-container {
+    @include max-width (767px) {
+        position: absolute;
+        flex-direction: column;
+        z-index: 1;
+        overflow: hidden;
+        top: 50px;
+        right: 20px;
+        width: 130px;
+        height: 255px;
+        transform: translateX(200%);
+        transition: transform 200ms ease-in-out;
+
+        box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+        border-radius: 30px 0px 30px 30px;
+
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+
     @include tablet {
         display: flex;
+        align-items: center;
     }
 
 }
 
-.nav__item {
-    &:not(:last-child) {
-        margin-right: 28px;
+.js-open-menu {
+    height: 28px;
+    width: 28px;
+
+    @include tablet {
+        display: none;
+    }
+
+    &__icon {
+        & {
+            fill: $dark-green;
+        }
+
     }
 }
 
-.nav__link {
-    color: $black;
+.js-open-menu__icon {
 
+    .js-open-menu:hover &,
+    .js-open-menu:focus & {
+        fill: $yellow-main;
+    }
+}
+
+.js-close-menu {
     @include max-width (767px) {
-        font-size: 16px;
-        line-height: 1.18;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        z-index: 2;
     }
 
     @include tablet {
-        font-size: 14px;
-        line-height: 1.17;
+        display: none;
     }
-
 }

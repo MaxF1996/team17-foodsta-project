@@ -24,6 +24,10 @@ body {
 .container {
   max-width: $mobile;
 
+  @include max-width (767px) {
+    position: relative;
+  }
+
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
   }
@@ -37,10 +41,12 @@ body {
 
   padding-left: 20px;
   padding-right: 20px;
+
   @media screen and (min-width: $tablet) {
     padding-left: 32px;
     padding-right: 32px;
   }
+
   @media screen and (min-width: $desktop) {
     padding-left: 16px;
     padding-right: 16px;
