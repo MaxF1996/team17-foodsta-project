@@ -3,26 +3,22 @@
     background-image: url("../images/customers_mob_1x_320.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 769px;
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
- 
+    background-size: 100% 100%;
+    
     
     @media screen and (min-width:$mobile){
     background-image: url("../images/customers-mob_1x_480.png");
-    height: 769px;
+   
     }
 
     @media screen and (min-width:$tablet) {
     background-image: url("../images/customers_tab_1x_768.png");
      padding-bottom: 120px;
-    height: 554px;
+    
         }
 
     @media screen and (min-width:$desktop) {
     background-image: url("../images/customers_desk_1x_1280.png");
-    height: 647px;
     padding-top: 100px;
     padding-bottom: 200px;
         }
@@ -39,8 +35,12 @@
     font-size: 28px;
     line-height: 1.17;
     font-weight: 700;
+    margin-bottom: 20px;
 
     color: $custom-black;
+    @media screen and (min-width:$mobile){
+        
+    }
 
    @include tablet {
     font-size: 42px;
@@ -49,40 +49,50 @@
 }
 
 .paragraf_customers {
-    margin-top: 20px;
     margin-bottom: 32px;
+    
 }
 
 .reviews_first {
+    
     @media screen and (min-width:$tablet) {
             display: flex;
             flex-direction: row;
+           
         }
 }
 
 .reviews_item {
     background-color: #FFFFFF;
     margin-bottom: 24px;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    border-top-right-radius: 10%;
+    border-radius: 0px 30px 30px 30px;
     padding: 8px;
     width: 280px;
+   
+
+     &:nth-child(2n) {
+        margin-bottom: 0;
+     }
+
+    @media screen and (min-width:$mobile){
     
+        
+    }
 
     @media screen and (min-width:$tablet){
     padding: 12px;
     margin-right: 32px;
     width: 336px;
-    height: 244px;
     margin-bottom: 0;
-    
+
+    &:not(:first-child) {
+            margin-right: 0;
+        }
     }
 
      @media screen and (min-width:$desktop){
         padding: 14px;
         width: 501px;
-        height: 227px;
         margin-right: 139px;
         margin-bottom: 0;
 
