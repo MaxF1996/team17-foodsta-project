@@ -21,7 +21,7 @@
 }
 .favorites-set__item {
     @include less-tablet {
-    &:not(:last-child) {
+    &:nth-child(-n+2) {
         margin-bottom: 20px;
     }
     &:nth-child(n + 4) {
