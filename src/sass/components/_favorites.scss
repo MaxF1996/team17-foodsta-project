@@ -3,80 +3,77 @@
 }
 .favorites__title,
 .favorites__text {
-text-align: center;
+    text-align: center;
 }
 .favorites__title {
-    font-size: 28px;
-    line-height: 1.178;
-    @media screen and (min-width: $tablet) {
-    font-size: 42px;
-    line-height: 1.16;
-    }
+    @extend %subtitle49;
+    margin-bottom: 20px;
 }
 .favorites__text {
     margin-bottom: 60px;
-
-    @media screen and (min-width: $desktop) {
+    @include desktop {
     margin-bottom: 40px;
     }
 }
 .favorites-set {
-    outline: 2px solid blueviolet;
-    @media screen and (min-width: $tablet) {
+    @include tablet {
     display: flex;
     flex-wrap: wrap;
     margin: -16px;
     }
 }
+.favorites-set__item {
+    @media screen and (max-width: calc($tablet - 1px)) {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &:nth-child(n + 4) {
+    display: none;
+    }
+    }
+    @include tablet {
+    width: calc((100% - 2*32px)/2);
+    margin: 16px;
+    }
+    @include desktop {
+    width: calc((100% - 3*32px)/3);
+    }
+}
 .favorites-set__plate {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
     margin-left: auto;
     margin-right: auto;
+    padding: 17px;
 
     width: 280px;
     height: 280px;
 
     border: 11px solid $yellow-main;
-    border-radius: 139.305px;
+    border-radius: 50%;
 
-    @media screen and (min-width: $tablet) {
+    @include tablet {
     width: 336px;
     height: 336px;
 
     border: 14px solid $yellow-main;
-    border-radius: 167.59px;
+    border-radius: 50%;
+
+    padding: 20px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include desktop {
     width: 395px;
     height: 395px;
 
     border: 16px solid $yellow-main;
-    border-radius: 197.5px;
-    }
-    &:hover, &:focus {
-        border-color: $button-green;
-    }
-}
-.favorites-set__item {
-    outline: 1px solid teal;
+    border-radius: 50%;
 
-    @media screen and (max-width: calc($tablet - 1px)) {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-        &:nth-child(n + 4) {
-        display: none;
-        }
+    padding: 24px;
     }
-    @media screen and (min-width: $tablet) {
-        width: calc((100% - 2*32px)/2);
-        margin: 16px;
-    }
-    @media screen and (min-width: $desktop) {
-        width: calc((100% - 3*32px)/3);
+
+    transition: $main-transition;
+
+    &:hover,
+    &:focus {
+    border-color: $button-green;
     }
 }
