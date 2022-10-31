@@ -1,26 +1,21 @@
 
-.section {
+.section_customers {
     background-image: url("../images/customers_mob_1x_320.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    
-@media screen and (min-width:$mobile){
+
+@media screen and (min-width:$mobile) {
     background-image: url("../images/customers-mob_1x_480.png");}
 
 @media screen and (min-width:$tablet) {
-    background-image: url("../images/customers_tab_1x_768.png");}
-
-@media screen and (min-width:$desktop) {
-    background-image: url("../images/customers_desk_1x_1280.png");} } 
-
-.section_customers {
-@media screen and (min-width:$tablet) {
+    background-image: url("../images/customers_tab_1x_768.png");
     padding-bottom: 120px;
     padding-top: 60px;}
 
 @media screen and (min-width:$desktop) {
     padding-top: 100px;
-    padding-bottom: 200px;} }
+    padding-bottom: 200px;
+    background-image: url("../images/customers_desk_1x_1280.png");} }
     
 .title_customers {
     font-size: 28px;
