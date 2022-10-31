@@ -1,6 +1,7 @@
 %menu-header-links {
   font-size: 16px;
   line-height: 1.1875; // h-19px
+
   @include tablet {
     font-size: 14px;
     line-height: 1.143; // h-16px
@@ -25,6 +26,7 @@
 %hero-text {
   font-size: 14px;
   line-height: 1.5; // h-21px
+
   @include tablet {
     font-size: 16px;
     line-height: 1.5; // h-24px
@@ -35,6 +37,7 @@
   // для h2 з висотою 49 на великих екранах
   font-size: 28px;
   line-height: 1.1786; // h-33px
+
   @include tablet {
     font-size: 42px;
     line-height: 1.1667; // h-49px
@@ -45,6 +48,7 @@
   // для h2 з висотою 50 на великих екранах
   font-size: 28px;
   line-height: 1.1786; // h-33px
+
   @include tablet {
     font-size: 42px;
     line-height: 1.1905; // h-50px
