@@ -1,0 +1,5 @@
+.header__logo {
+    @include tablet {
+        margin-right: auto;
+    }
+}
