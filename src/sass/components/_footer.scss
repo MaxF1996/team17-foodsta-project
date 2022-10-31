@@ -1,10 +1,24 @@
 .footer {
-    background-image: url(/src/images/footer/bg-mobail.png);
+    margin: 0 auto;
+    max-width: 480px;
+    background-image: url(/src/images/footer/mobail-bg/1.png), url(/src/images/footer/mobail-bg/2.png), url(/src/images/footer/mobail-bg/3.png);
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100%;
+    background-position: top right, 0 132px, bottom;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+
+    @include tablet {
+        background-image: url(/src/images/footer/bg-tablet.png);
+        background-position: bottom right;
+        background-size: cover;
+        max-width: 832px;
+    }
+    @include desktop {
+        background-image: url(/src/images/footer/bg-desctop.png);
+        max-width: 1440px;
+    }
+
 }
-.footer__nav-sub {
+.wrapper__nav-sub {
     margin-bottom: 60px;
     @include tablet {
         margin-bottom: 100px;
@@ -12,102 +26,45 @@
     @include desktop {
         display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
         margin-bottom: 80px;
     }
 }
-// ______________________________________________________
 
-.footer__nav {
+.footer__navigation {
     display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-}
-
-.subscribe {
-    &__text {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.14;
-        color: #2C2C2C;
+    
+    @media screen and (max-width: 1279px) {
         margin-bottom: 40px;
-
-        @include tablet {
-            font-size: 16px;
-            margin-right: auto;
-        }
-
-        @include desktop {}
     }
-
-    &__form {
-        width: 100%;
-
-        @include tablet {
-            display: flex;
-        }
-
-        @include desktop {}
-    }
-
-    &__input:placeholder-shown {
-
-        border: 0.85px solid rgba(255, 229, 80, 1);
-
-    }
-
-    &__input:invalid {
-        border: 0.85px solid rgba(255, 112, 93, 1);
-
-    }
-
-    &__input {
-        outline: none;
-        width: 100%;
-        height: 42px;
-        padding: 12px;
-        border-radius: 30px;
-        border: 0.85px solid rgba(126, 177, 1, 1);
-        margin-bottom: 20px;
-
-        @include tablet {
-            width: 395px;
-            margin-bottom: 0;
-        }
-
-        @include desktop {}
-    }
-
-    &__button {
-        height: 42px;
-        border-radius: 30px;
-        background-color:
-            rgba(187, 243, 48, 1);
-        margin-left: auto;
-        margin-bottom: 40px;
-        padding: 11px 22px;
-
-        @include tablet {
-            margin-left: 22px;
-            margin-bottom: 0;
-        }
-
-        @include desktop {}
-    }
-
-    &__link {
-        color: green;
-
-        @include tablet {}
-
-        @include desktop {}
+    @include tablet {
+        align-items: center;
     }
 }
+.footer__nav {
+    margin-left: 80px;
+    @include tablet {
+        margin-left: 115px;
+    }
+    @include desktop {
+        margin-left: 150px;
+    }
+}
+.footer__nav-item {
+   width: 35%;
+  
+}
+.footer__nav-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 2px;
 
-// ____________________________________________________-
+    font-size: 14px;
+    line-height: 1.14;
+    @include tablet {
+        padding: 10px 0;
+    }
+}
 
 .subscribe__titel--footer {
     line-height: 1.5;
@@ -228,3 +185,5 @@
     font-size: 10px;
     line-height: 1.2;
 }
+
+
