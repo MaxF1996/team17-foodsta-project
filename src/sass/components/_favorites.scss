@@ -20,7 +20,7 @@
     }
 }
 .favorites-set__item {
-    @media screen and (max-width: calc($tablet - 1px)) {
+    @include less-tablet {
     &:not(:last-child) {
         margin-bottom: 20px;
     }
