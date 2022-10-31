@@ -5,6 +5,7 @@
 // }
 
 body {
+  padding-top: 72px;
   font-family: $main-font-family;
   font-size: $main-font-size;
   line-height: $main-line-height;
@@ -24,10 +25,6 @@ body {
 .container {
   max-width: $mobile;
 
-  @include max-width (767px) {
-    position: relative;
-
-  }
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
