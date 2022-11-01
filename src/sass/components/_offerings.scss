@@ -32,8 +32,12 @@
     margin-bottom: 60px;
 
     @include desktop {
+<<<<<<< HEAD
     max-width: 550px;
      margin-bottom: -93px;
+=======
+      margin-bottom: 0;
+>>>>>>> 2ac47f7c07897d659da5ebb128b0522bf643de91
     }
   }
 
@@ -104,7 +108,6 @@
     @include less-tablet {
       margin-bottom: 28px;
     }
-    
 
     @include tablet {
       width: 252px;
