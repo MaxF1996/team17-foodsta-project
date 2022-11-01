@@ -6,25 +6,24 @@
   width: 100%;
   padding-bottom: 100px;
 
-  @media (min-width: $mobile) {
+  @include mobile {
     background-image: url('../images/offerings/rectangle_480.png');
   }
 
-  @media (min-width: $tablet) {
+  @include tablet {
     height: 990px;
     padding-top: 0;
     background-color: $yellow-main;
   }
 
-  @media (min-width: $desktop) {
+  @include desktop {
     height: 624px;
     padding-top: 0;
-    padding-bottom: 0;
     background-color: $yellow-main;
   }
 
   &--flex {
-    @media (min-width: 1280px) {
+    @include desktop {
       @include flex-container(row, center, start, null, null);
       flex-flow: nowrap;
       gap: 90px;
@@ -35,21 +34,20 @@
     margin-top: -60px;
     margin-bottom: 60px;
 
-    @media (min-width: 768px) {
-      // margin-top: 150px;
+    @include desktop {
+     margin-bottom: 0;
     }
   }
 
   &__label {
     margin-bottom: 28px;
 
-    @media (min-width: 768px) {
+    @include tablet {
       margin-bottom: 40px;
       width: 526px;
     }
 
-    @media (min-width: 1280px) {
-      margin-top: 125px;
+    @include desktop {
       width: 500px;
     }
   }
@@ -62,7 +60,7 @@
     color: $custom-black;
     text-transform: capitalize;
 
-    @media (min-width: 768px) {
+    @include tablet {
       margin-bottom: 20px;
       font-size: 42px;
       line-height: 1.17;
@@ -70,44 +68,47 @@
   }
 
   &__text-primary {
-    @media (min-width: 768px) {
+    @include tablet {
       font-size: 16px;
       line-height: 1.19;
     }
 
-    @media (min-width: 1280px) {
+    @include desktop {
       line-height: 1.5;
     }
   }
 
   &__text-secondary {
-    @media (min-width: 768px) {
+    @include tablet {
       font-size: 14px;
     }
 
-    @media (min-width: 1200px) {
+    @include desktop {
       line-height: 1.5;
     }
   }
 
   &__tb {
-    @media (min-width: 768px) {
+    @include tablet {
       margin-bottom: 40px;
       @include flex-container(row, center, start, null, null);
       gap: 116px;
       flex-flow: nowrap;
     }
 
-    @media (min-width: 1280px) {
+    @include desktop {
       margin-bottom: 32px;
       gap: 67px;
     }
   }
 
   &__features {
-    margin-bottom: 28px;
+    @include less-tablet {
+      margin-bottom: 28px;
+    }
+    
 
-    @media (min-width: 768px) {
+    @include tablet {
       width: 252px;
     }
   }
