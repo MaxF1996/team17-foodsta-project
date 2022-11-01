@@ -14,6 +14,12 @@ $desktop: 1280px;
   }
 }
 
+@mixin less-tablet {
+  @media screen and (max-width: calc($tablet - 1px)) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (min-width: $tablet) {
     @content;
