@@ -5,7 +5,7 @@
 
 
 .subscribe{
-    background-color: white;
+    background-color: $main-bg-color;
     
         @include mobile{
     }
@@ -58,7 +58,7 @@ font-family: 'Roboto';
         font-weight: 400;
         font-size: 14px;
         line-height: 1.14;
-    color: #2C2C2C;
+    color: $custom-black;
     margin-bottom: 40px;
     @include tablet {
         font-size: 16px;
@@ -77,11 +77,11 @@ font-family: 'Roboto';
 }
 &__input:placeholder-shown{
    
-    border: 0.85px solid rgba(255, 229, 80, 1);
+    border: 0.85px solid $yellow-main;
 
 }
 &__input:invalid {
-    border: 0.85px solid rgba(255, 112, 93, 1);
+    border: 0.85px solid $alarm-color;
 
 }
 
@@ -91,13 +91,14 @@ font-family: 'Roboto';
 height: 42px;
 padding: 12px;
 border-radius:30px;
-border: 0.85px solid rgba(126, 177, 1, 1);
+border: 0.85px solid $button-green-dark;
 margin-bottom: 20px;
 @include tablet {
     width: 395px;
 }
     @include desktop {}
 }
+
 &__button{
 font-family: 'Roboto';
     font-style: normal;
@@ -107,7 +108,7 @@ font-family: 'Roboto';
     height: 42px;
     border-radius: 30px;
     background-color:
-     rgba(187, 243, 48, 1);
+    $button-green;
      margin-left: auto;
      margin-bottom: 60px;
      padding: 11px 22px;
@@ -117,6 +118,10 @@ font-family: 'Roboto';
     }
     
         @include desktop {}
+}
+&__button:hover,
+&__button:focus{
+    background-color:$button-green-light;
 }
 &__link{
     color: $button-green-dark;
