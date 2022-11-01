@@ -99,12 +99,17 @@ margin-bottom: 20px;
     @include desktop {}
 }
 &__button{
+font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+        line-height: 1.5;
     height: 42px;
     border-radius: 30px;
     background-color:
      rgba(187, 243, 48, 1);
      margin-left: auto;
-     margin-bottom: 40px;
+     margin-bottom: 60px;
      padding: 11px 22px;
     @include tablet {
         margin-left: 22px;
@@ -114,7 +119,7 @@ margin-bottom: 20px;
         @include desktop {}
 }
 &__link{
-    color: green;
+    color: $button-green-dark;
     @include tablet {}
     
         @include desktop {}
