@@ -5,10 +5,17 @@
         modalContainerClose: document.querySelector("[modalCloseBtn]"),
 
         modal: document.querySelector(".modal"),
-        fSet: document.querySelector(".modal__fieldset"),
-        warningMessages: document.querySelectorAll(".modal__warning-message"),
-        modalBtnMsg: document.querySelector(".modal__button-warning")
+        inps: document.querySelectorAll(".modal__text-input"),
+
+        msgsContainers: document.querySelectorAll(".modal__warning-text-container"),
+        modalBtnMsg: document.querySelector(".modal__button-warning"),
     }
+
+    const Alert = {
+        wrongInput: 1,
+        emptyInput: 3
+    }
+    Object.freeze(Alert);
 
 
     // "Open modal" buttons
@@ -18,31 +25,40 @@
         });
     });
 
-    // "Close modal" button. Yes, there's only one of kind
+    // The "close modal" button. Yes, there's only one of kind
     refs.modalContainerClose.addEventListener("click", () => {
         refs.modalContainer.style.transform = "scaleY(0)";
     });
 
 
-    // Change of modal alarm messages visibility (change of messages, the "invisible" class)  
-    // Invalid submit
+    // Invalid inputs on the submit event
     refs.modal.addEventListener("invalid", (e) => {
         e.preventDefault;
-        msgChanger(refs.warningMessages, "invisible", false);
+
+        refs.modalBtnMsg.textContent = "Invalid inputs";
+        let emptyInputsAbsent = true;
+
+        for (let idx = 0; idx < refs.inps.length; ++idx) {
+            if (refs.inps[idx].value.length == 0) {
+                refs.msgsContainers[idx].childNodes[Alert.emptyInput].style.opacity = "1";
+                refs.msgsContainers[idx].childNodes[Alert.wrongInput].style.opacity = "0";
+                emptyInputsAbsent = false;
+            }
+        }
         
-        refs.modalBtnMsg.classList.remove("invisible");
-        setTimeout(() => { refs.modalBtnMsg.classList.add("invisible"); }, 2000);
+        if (!emptyInputsAbsent) {
+            refs.modalBtnMsg.textContent = "All fields are required";
+        }
+        refs.modalBtnMsg.style.opacity = "1";
+        setTimeout(() => { refs.modalBtnMsg.style.opacity = "0"; }, 2000);
     }, true);
 
-    // The change of messages back after a click on the fieldset inputs
-    refs.fSet.addEventListener("click", () => { msgChanger(refs.warningMessages, "invisible", true) });
 
-    // A function that changes messages, if a visibility condition is met
-    function msgChanger(msgList, classToToggle, classIsInSelectorReq) {
-        if (classIsInSelectorReq === msgList[0].classList.contains(classToToggle)) {
-            msgList.forEach( msg =>
-                msg.classList.toggle(classToToggle)
-            );
-        }
+    // Change alert message of an input back if this input gets some... input
+    for (let idx = 0; idx < refs.inps.length; ++idx) {
+        refs.inps[idx].addEventListener("input", () => {
+            refs.msgsContainers[idx].childNodes[Alert.emptyInput].style.opacity = "0";
+            refs.msgsContainers[idx].childNodes[Alert.wrongInput].style.opacity = "1";
+        });
     }
 })();

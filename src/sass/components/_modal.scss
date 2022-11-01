@@ -3,13 +3,12 @@
 
     position: fixed;
     top: 0;
+    transform: scaleY(0);
     transform-origin: top;
-
-    overflow-y: auto;
 
     width: 100vw;
     height: 100vh;
-    transform: scaleY(0);
+    overflow-y: auto;
 
     background-color: $backdrop-color;
 
@@ -34,21 +33,33 @@
 
     background-color: $modal-bg-color;
 
-    @media screen and (max-height: 450px) {
-        top: 15px;
+    &::after {
+        content: '';
+        pointer-events: none;
+
+        position: absolute;
+        bottom: -$modal-safety-padding-vertical;
+
+        width: 1px;
+        height: $modal-safety-padding-vertical;
     }
+
+    @media screen and (max-height: 459px) {
+        top: $modal-safety-padding-vertical;
+    }
+
     @include tablet {
-        @media screen and (max-height: 450px) {
-            top: 15px;
+        @media screen and (max-height: 459px) {
+            top: $modal-safety-padding-vertical;
             transform: translateX(-50%);
 
-            max-width: 458px;
+            max-width: 459px;
         }
 
         top: 50%;
         transform: translate(-50%, -50%);
 
-        max-width: 458px;
+        max-width: 459px;
     }
 }
 
@@ -141,7 +152,7 @@
 
 .modal__warning-container {
     position: absolute;
-    bottom: 20%;
+    bottom: 30%;
     transform: translateY(50%);
 
     @include flex-container(row, center, normal);
@@ -173,9 +184,13 @@
 
     color: $alarm-color;
 
+    transition: opacity $modal-transition;
+
     &--error {
         position: absolute;
         top: 0;
+
+        opacity: 0;
 
         @include set-font(13px, 18.2px);
     }
@@ -220,6 +235,9 @@
 
     min-width: 165px;
     padding: 16px;
+
+    opacity: 0;
+    pointer-events: none;
 
     @include set-font(14px, 16px);
     font-weight: 500;
