@@ -1,8 +1,8 @@
 (() => {
     const refs = {
         modalContainer: document.querySelector(".backdrop"),
-        modalContainerOpen: document.querySelectorAll("[modalOpenBtn]"),
-        modalContainerClose: document.querySelector("[modalCloseBtn]"),
+        modalContainerOpen: document.querySelectorAll(".modal-open-button"),
+        modalContainerClose: document.querySelector(".modal__close-button"),
 
         modal: document.querySelector(".modal"),
         inps: document.querySelectorAll(".modal__text-input"),

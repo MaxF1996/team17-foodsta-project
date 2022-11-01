@@ -1,6 +1,6 @@
 <div class="backdrop">
     <form class="modal" autocomplete="off">
-        <button class="modal__close-button" type="button" modalCloseBtn>
+        <button class="modal__close-button" type="button">
             <svg class="modal__close-button-ico">
                 <use href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -11,7 +11,7 @@
 
             <div class="modal__input-container">
                 <label class="modal__input-label" for="name">Name</label>
-                <input class="modal__text-input" type="text" name="name" placeholder="Your name" minlength="3" maxlength="25" required>
+                <input class="modal__text-input" type="text" id="name" placeholder="Your name" minlength="3" maxlength="25" required>
                 <div class="modal__warning-container">
                     <svg class="warning-ico">
                         <use href="./images/icons.svg#alarm"></use>
@@ -25,7 +25,7 @@
 
             <div class="modal__input-container">
                 <label class="modal__input-label" for="phone">Phone number</label>
-                <input class="modal__text-input" type="tel" name="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" minlength="10" maxlength="13" required>
+                <input class="modal__text-input" type="tel" id="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" minlength="10" maxlength="13" required>
                 <div class="modal__warning-container">
                     <svg class="warning-ico">
                         <use href="./images/icons.svg#alarm"></use>
@@ -38,8 +38,8 @@
             </div>
 
             <div class="modal__input-container">
-                <label class="modal__input-label" for="email">E-mail</label>
-                <input class="modal__text-input" type="email" name="mail" placeholder="example@gmail.com" required>
+                <label class="modal__input-label" for="mail">E-mail</label>
+                <input class="modal__text-input" type="email" id="mail" placeholder="example@gmail.com" required>
                 <div class="modal__warning-container">
                     <svg class="warning-ico">
                         <use href="./images/icons.svg#alarm"></use>
