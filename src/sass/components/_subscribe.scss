@@ -3,7 +3,8 @@
 // }
 
 .subscribe {
-  background-color: $main-bg-color;
+  margin-top: -60px;
+  padding-bottom: 60px;
 
   @include mobile {
   }
@@ -18,6 +19,8 @@
     flex-direction: row-reverse;
   }
   &__box {
+//  background: transparent;
+//  background-color: transparent;
     margin-left: auto;
     @include tablet {
     }
@@ -28,6 +31,7 @@
   &__picture {
     display: block;
     margin-bottom: 17px;
+    background-color: rgba($color: #000000, $alpha: 0.0);
 
     @include tablet {
       margin-left: auto;
@@ -109,7 +113,6 @@
     border-radius: 30px;
     background-color: $button-green;
     margin-left: auto;
-    margin-bottom: 60px;
     padding: 11px 22px;
     @include tablet {
       margin-left: 22px;
