@@ -4,20 +4,17 @@
   background-size: cover;
   height: auto;
   width: 100%;
-  padding-bottom: 100px;
 
   @include mobile {
     background-image: url('../images/offerings/rectangle_480.png');
   }
 
   @include tablet {
-    height: 990px;
     padding-top: 0;
     background-color: $yellow-main;
   }
 
   @include desktop {
-    height: 624px;
     padding-top: 0;
     background-color: $yellow-main;
   }
@@ -35,7 +32,8 @@
     margin-bottom: 60px;
 
     @include desktop {
-     margin-bottom: 0;
+    max-width: 550px;
+     margin-bottom: -93px;
     }
   }
 
