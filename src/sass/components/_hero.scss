@@ -1,43 +1,35 @@
 .hero{
+    padding-top: 60px;
+    padding-bottom: 50px;
     @include tablet{
-        position: relative;
-        width: $tablet;
-        height: 511px;
         margin: 0 auto;
         background-image: url(../images/bg-hero-tab.png);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100% 150px;
         background-position: bottom;
+        padding-bottom: 115px;
     }
     @include desktop{
-        width: $desktop;
-        height: 647px;
         background-image: url(../images/bg-hero.png);    
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100% 200px;
         background-position: bottom;
+        padding-top: 15px;
+        padding-bottom: 40px;
     }
    
-   & .container{
-    padding-top: 60px;
-    @include s-mobile{
-        padding-bottom: 50px;
-    }
-    
+   & .container{ 
     @include tablet{
+        position: relative;
         display: flex;
     }
     @include desktop{
         justify-content: space-between;
-        padding-top: 15px; 
+        align-items: center;
     }
    }
 }
-.hero__wrap{
-    @include desktop{
-        margin-top: 159px;
-    }
-}
+
 .hero__title{
     @extend %main-title; 
 }
@@ -52,14 +44,14 @@
     display: none;
    @include tablet{
         display: block;
-        position: absolute;
-        min-width: 0;
-        right: 40px;
-        bottom: 42px;
+        position: relative;
+         top: 89px;
+         right: 0;
    }
     @include desktop{
-        right: 30px;
-        bottom: 53px;
+        position: static;
+        margin-right: 16px;
+      
     }
 }
 
@@ -71,7 +63,6 @@
     background-color: #FEFEFE;
     border-radius: 50%;
     border: 14px solid #FFE550;
-    // overflow: hidden;
 @include desktop{
     width: 580px;
     height: 580px; 
@@ -191,50 +182,3 @@ background-color: $main-bg-color;
 }
 
 
-// .slider__btn{
-//     display: flex;
-//     align-items: center;
-//     width: 34px;
-//     height: 28px;
-//     border: none;
-//     border-radius: 8px;
-//     background-color: $main-bg-color;
-//     box-shadow: $slide-btn-shadow;
-//     z-index: 10;
-//     @include desktop{
-//         width: 48px;
-//         height: 40px;
-//     }
-//     &.icon-left{
-//         position: absolute;
-//         left: -14px;
-//         bottom: 50%;
-//         transform: translateY(50%);
-//         padding-left: 9px;
-//         @include desktop{
-//             padding-left: 13px;  
-//         }
-        
-//     }
-//     &.icon-right{
-//         position: absolute;
-//         right: -14px;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         padding-left: 14px;
-//         @include desktop{
-//             padding-left: 18.5px;
-        
-//     }
-//     }
-// }
-
-// .slider__arrow{
-//     width: 11px;
-//     height: 20px;
-
-//     @include desktop{
-//         width: 17px;
-//         height: 29px;
-//     }
-// }
