@@ -22,12 +22,14 @@
     refs.modalContainerOpen.forEach( btn => {
         btn.addEventListener("click", () => {
             refs.modalContainer.style.transform = "scaleY(1)";
+            document.body.style.overflow = "hidden";
         });
     });
 
     // The "close modal" button. Yes, there's only one of kind
     refs.modalContainerClose.addEventListener("click", () => {
         refs.modalContainer.style.transform = "scaleY(0)";
+        document.body.style.overflow = "visible";
     });
 
 
