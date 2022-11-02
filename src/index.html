@@ -10,27 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./sass/index.scss" />
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script>
-    jQuery($ => {
-      // The speed of the scroll in milliseconds
-      const speed = 1000;
-
-      $('a[href*="#"]')
-        .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
-        .unbind('click.smoothScroll')
-        .bind('click.smoothScroll', event => {
-          const targetId = event.currentTarget.getAttribute('href').split('#')[1];
-          const targetElement = document.getElementById(targetId);
-
-          if (targetElement) {
-            event.preventDefault();
-            $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
-          }
-        });
-    });
-  </script>
   <script type="module" src="./index.js"></script>
 </head>
 
