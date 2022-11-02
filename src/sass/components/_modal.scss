@@ -8,7 +8,6 @@
 
     width: 100vw;
     height: 100vh;
-    overflow-y: auto;
 
     background-color: $backdrop-color;
 
@@ -24,6 +23,7 @@
     top: 60px;
     left: 50%;
     transform: translateX(-50%);
+    overflow-y: auto;
 
     width: 100%;
     max-width: 320px;
@@ -33,33 +33,24 @@
 
     background-color: $modal-bg-color;
 
-    &::after {
-        content: '';
-        pointer-events: none;
-
-        position: absolute;
-        bottom: -$modal-safety-padding-vertical;
-
-        width: 1px;
-        height: $modal-safety-padding-vertical;
-    }
-
-    @media screen and (max-height: 459px) {
-        top: $modal-safety-padding-vertical;
+    @media screen and (max-height: 520px) {
+        top: 5vh;
+        max-height: 90vh;
     }
 
     @include tablet {
-        @media screen and (max-height: 459px) {
-            top: $modal-safety-padding-vertical;
-            transform: translateX(-50%);
-
+        @media screen and (max-height: 520px) {
+            top: 5vh;
+            height: 90vh;
             max-width: 459px;
+
+            transform: translateX(-50%);
         }
 
         top: 50%;
-        transform: translate(-50%, -50%);
-
         max-width: 459px;
+
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -124,7 +115,7 @@
 }
 
 .modal__text-input {
-    z-index: 7;
+    z-index: 16;
 
     padding: 13px 11px;
     border-radius: 30px;
@@ -226,7 +217,7 @@
 }
 
 .modal__button-warning {
-    z-index: 7;
+    z-index: 16;
 
     position: absolute;
     bottom: calc(100% + 6px);
