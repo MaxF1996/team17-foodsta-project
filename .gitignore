@@ -107,3 +107,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Old versions of the modal script
+src/modal-zero.js
