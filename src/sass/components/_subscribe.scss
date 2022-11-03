@@ -17,9 +17,7 @@
     flex-direction: row-reverse;
   }
   &__box {
-//  background: transparent;
-//  background-color: transparent;
-    margin-left: auto;
+ margin-left: auto;
     @include tablet {
     }
 
@@ -39,8 +37,6 @@
     }
   }
   &__header {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2;
@@ -55,8 +51,6 @@
     }
   }
   &__text {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
@@ -102,8 +96,6 @@
   }
 
   &__button {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 1.5;
@@ -112,12 +104,14 @@
     background-color: $button-green;
     margin-left: auto;
     padding: 11px 22px;
+    transition: $main-transition;
     @include tablet {
       margin-left: 22px;
       margin-bottom: 0;
+      transition: $main-transition;
     }
 
-    @include desktop {
+    @include desktop {transition: $main-transition;
     }
   }
   &__button:hover,
@@ -133,4 +127,10 @@
     @include desktop {
     }
   }
+}
+.error__text{
+  font-weight: 400;
+    font-size: 10px;
+    line-height: 1.5;
+ color: #FF705D;
 }
