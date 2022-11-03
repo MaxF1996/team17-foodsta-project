@@ -3,17 +3,17 @@
 // }
 
 .subscribe {
-  margin-top: -60px;
+  margin-top: -44px;
   padding-bottom: 60px;
 
-  @include mobile {
+  @include mobile {margin-top: -60px;;
   }
 
-  @include tablet {
+  @include tablet {margin-top: -74px;
     display: flex;
     flex-direction: column;
   }
-  @include desktop {
+  @include desktop {margin-top: -66px;
     flex-direction: row-reverse;
   }
   &__box {
@@ -31,6 +31,7 @@
 
     @include tablet {
       margin-left: auto;
+      margin-bottom: 20px;
     }
 
     @include desktop {
@@ -48,6 +49,7 @@
     }
 
     @include desktop {
+      margin-top: 46px;
     }
   }
   &__text {
@@ -57,11 +59,13 @@
     color: $custom-black;
     margin-bottom: 40px;
     @include tablet {
+      margin-bottom: 24px;
       font-size: 16px;
       margin-right: auto;
     }
 
     @include desktop {
+      margin-bottom: 24px;
     }
   }
   &__form {
@@ -90,6 +94,7 @@
     margin-bottom: 20px;
     @include tablet {
       width: 395px;
+      margin-bottom: 0;
     }
     @include desktop {
     }
@@ -128,9 +133,4 @@
     }
   }
 }
-.error__text{
-  font-weight: 400;
-    font-size: 10px;
-    line-height: 1.5;
- color: #FF705D;
-}
+
