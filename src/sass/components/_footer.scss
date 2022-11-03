@@ -11,6 +11,7 @@
 
   @include min-max-width($tablet, calc($desktop - 1px)) {
     background-image: url(/src/images/footer/bg-tablet.png);
+    background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 100% auto;
   }
