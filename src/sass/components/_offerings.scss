@@ -10,6 +10,7 @@
   }
 
   @include tablet {
+    background-image: none;
     padding-top: 0;
     background-color: $yellow-main;
   }
@@ -21,8 +22,8 @@
 
   &--flex {
     @include desktop {
-      @include flex-container(row, center, start, null, null);
-      flex-flow: nowrap;
+      @include flex-container(row, flex-end, start, null, null);
+      flex-wrap: nowrap;
       gap: 90px;
     }
   }
