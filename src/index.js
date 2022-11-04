@@ -1,4 +1,4 @@
-import './modal';
+import './js/modal.js';
 
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
