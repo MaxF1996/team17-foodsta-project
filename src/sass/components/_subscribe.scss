@@ -82,8 +82,8 @@
   }
   &__input:invalid {
     border: 0.85px solid $alarm-color;
+    
   }
-
   &__input {
     outline: none;
     width: 100%;
@@ -145,8 +145,12 @@
     @include desktop {}
   }
   .error__none{
-    display: none;
+    display: flex;
+   opacity: 1;
   }
 .alarm_svg{
   margin-right: 5px;
+}
+.subscribe__input:focus:invalid+.warning-container{
+
 }
