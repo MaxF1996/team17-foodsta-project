@@ -108,8 +108,8 @@ html[lang="en"] {
             height: 100%;
             padding: 16px 16px;
 
-            &:hover,
-            &:focus {
+            &--bgc-green:hover,
+            &--bgc-green:focus {
                 background-color: $button-green;
             }
         }
