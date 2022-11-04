@@ -45,15 +45,14 @@
             id="email"
             placeholder="Enter your email"
             class="subscribe__input"
-          />
-          <div class="warning-container">
-            <p class="error__message error__none">
-              <svg class="alarm_svg" width="11" height="11">
-                <use href="./images/icons.svg#alarm"></use>
-              </svg>
-              Not a valid email address (example@email.com)
-            </p>
-          </div>
+            required
+          /> 
+          <p class="error__message">
+            <svg class="alarm_svg" width="11" height="11">
+              <use href="./images/icons.svg#alarm"></use>
+            </svg>
+            Not a valid email address (example@email.com)
+          </p>
         </div>
         <button type="submit" class="subscribe__button">Subscribe</button>
       </form>

@@ -8,7 +8,6 @@
 
   @include mobile {margin-top: -60px;;
   }
-
   @include tablet {margin-top: -74px;
     display: flex;
     flex-direction: column;
@@ -16,14 +15,15 @@
   @include desktop {margin-top: -66px;
     flex-direction: row-reverse;
   }
+
   &__box {
- margin-left: auto;
+  margin-left: auto;
     @include tablet {
     }
-
     @include desktop {
     }
   }
+
   &__picture {
     display: block;
     margin-bottom: 17px;
@@ -37,61 +37,64 @@
     @include desktop {
     }
   }
+
   &__header {
+    margin-bottom: 20px;
+
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2;
-    margin-bottom: 20px;
+
     @include tablet {
       font-size: 42px;
       line-height: 1.2;
       margin-right: auto;
     }
-
     @include desktop {
       margin-top: 46px;
     }
   }
+
   &__text {
+    margin-bottom: 40px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
+
     color: $custom-black;
-    margin-bottom: 40px;
+
     @include tablet {
       margin-bottom: 24px;
       font-size: 16px;
       margin-right: auto;
     }
-
     @include desktop {
       margin-bottom: 24px;
     }
   }
+
   &__form {
     width: 100%;
+
     @include tablet {
       display: flex;
     }
-
     @include desktop {
     }
   }
-  &__input:placeholder-shown {
-    border: 0.85px solid $yellow-main;
-  }
-  &__input:invalid {
-    border: 0.85px solid $alarm-color;
-    
-  }
+
   &__input {
     outline: none;
     width: 100%;
     height: 42px;
+    margin-bottom: 20px;
     padding: 12px;
     border-radius: 30px;
-    border: 0.85px solid $button-green-dark;
-    margin-bottom: 20px;
+    border: 0.85px solid $yellow-main;
+
+    transition: border-color $main-transition;
+
     @include tablet {
       width: 395px;
       margin-bottom: 0;
@@ -100,25 +103,38 @@
     }
   }
 
+  &__input:focus:invalid {
+    border-color: $alarm-color;
+  }
+
+  &__input:valid {
+    border-color: $dark-green;
+  }
+
   &__button {
+    margin-left: auto;
+    padding: 11px 22px;
+
     font-weight: 500;
     font-size: 13px;
     line-height: 1.5;
     height: 42px;
+
     border-radius: 30px;
     background-color: $button-green;
-    margin-left: auto;
-    padding: 11px 22px;
-    transition: $main-transition;
+
+    transition: /* Щось тут має бути */ $main-transition;
+
     @include tablet {
       margin-left: 22px;
       margin-bottom: 0;
-      transition: $main-transition;
+      transition: /* Щось тут має бути */ $main-transition; // Точно треба?
     }
 
     @include desktop {transition: $main-transition;
     }
   }
+
   &__button:hover,
   &__button:focus {
     background-color: $button-green-light;
@@ -133,24 +149,28 @@
     }
   }
 }
+
 .error__message{
   display: flex;
   margin-top: 4px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 1.5;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+
+  opacity: 0;
   color: $alarm-color;
+
+  transition: opacity $main-transition;
+
+  .subscribe__input:focus:invalid + & {
+    opacity: 1;
+  }
+
   @include tablet {}
+  @include desktop {}
+}
   
-    @include desktop {}
-  }
-  .error__none{
-    display: flex;
-   opacity: 1;
-  }
 .alarm_svg{
   margin-right: 5px;
-}
-.subscribe__input:focus:invalid+.warning-container{
-
 }
