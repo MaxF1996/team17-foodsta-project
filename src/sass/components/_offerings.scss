@@ -18,6 +18,9 @@
   @include desktop {
     padding-top: 0;
     background-color: $yellow-main;
+    margin-top: -35px;
+    position: relative;
+    z-index: -1;
   }
 
   &--flex {
