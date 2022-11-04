@@ -161,8 +161,9 @@
 
 .error__message {
   display: flex;
-  margin-top: 4px;
-
+  left: 0;
+  bottom: 0;
+position: absolute;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.5;
@@ -171,6 +172,9 @@
   color: $alarm-color;
 
   transition: opacity $main-transition;
+  @media screen and (min-width: 768px) {
+      bottom: -18px;
+    }
 
   .subscribe__input:focus:invalid + & {
     opacity: 1;
@@ -184,4 +188,7 @@
 
 .alarm_svg {
   margin-right: 5px;
+}
+.subscribe__error{
+  position: relative;
 }
