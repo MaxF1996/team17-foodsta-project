@@ -1,36 +1,63 @@
 //________________________background________________
+// .footer {
+//   @include less-tablet {
+//     background-image: url(/src/images/footer/mobail-bg/1.png),
+//       url(/src/images/footer/mobail-bg/2.png), url(/src/images/footer/mobail-bg/3.png);
+//     background-repeat: no-repeat;
+//     background-position: top right, 0 132px, bottom;
+//   }
+
+//   box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+
+//   @include min-max-width($tablet, calc($desktop - 1px)) {
+//     background-image: url(/src/images/footer/bg-tablet.png);
+//     background-repeat: no-repeat;
+//     background-position: bottom right;
+//     background-size: 100% auto;
+//   }
+//   &.section {
+//     @include desktop {
+//       padding: 0;
+//     }
+//   }
+
+//   & .container {
+//     @include desktop {
+//       background-image: url(/src/images/footer/bg-desctop.png);
+//       background-size: 1211px;
+//       background-repeat: no-repeat;
+//       background-position: bottom right 16px;
+
+//       padding-top: 100px;
+//       padding-bottom: 100px;
+//     }
+//   }
+// }
 .footer {
-  @include less-tablet {
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+    margin: 0 auto;
+
     background-image: url(/src/images/footer/mobail-bg/1.png),
-      url(/src/images/footer/mobail-bg/2.png), url(/src/images/footer/mobail-bg/3.png);
-    background-repeat: no-repeat;
+      url(/src/images/footer/mobail-bg/2.png),
+      url(/src/images/footer/mobail-bg/3.png);
     background-position: top right, 0 132px, bottom;
   }
 
-  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
-
-  @include min-max-width($tablet, calc($desktop - 1px)) {
+  @include tablet {
     background-image: url(/src/images/footer/bg-tablet.png);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 100% auto;
+    background-position: bottom center;
+    background-size: 768px;
   }
-  &.section {
-    @include desktop {
-      padding: 0;
-    }
-  }
-
-  & .container {
-    @include desktop {
-      background-image: url(/src/images/footer/bg-desctop.png);
-      background-size: 1211px;
-      background-repeat: no-repeat;
-      background-position: bottom right 16px;
-
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1280px;
+    background-image: url(/src/images/footer/bg-desctop.png);
+    background-size: 1211px;
+    background-position: bottom right 16px;
   }
 }
 //_________________________NAVIGATION____________________________
@@ -117,9 +144,6 @@
 }
 .subscribe__form--footer {
   margin-bottom: 20px;
-  @include tablet {
-    margin-bottom: 12px;
-  }
 }
 .subscribe__input--footer {
   @include tablet {
@@ -130,7 +154,7 @@
   }
 }
 .subscribe__privacy-text {
-  font-size: 12px;
+   font-size: 12px;
   line-height: 1.16;
 }
 
