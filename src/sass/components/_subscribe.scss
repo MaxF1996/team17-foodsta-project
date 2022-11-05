@@ -99,10 +99,6 @@
 
     transition: border-color $main-transition;
 
-    &::placeholder {
-      @include set-font(12px, 18px);
-    }
-
     @include tablet {
       width: 395px;
       margin-bottom: 0;
@@ -111,11 +107,13 @@
     }
   }
 
-  &__input:focus:invalid {
+  &__input:focus:not(:placeholder-shown):invalid,
+  &__input:not(:focus):not(:placeholder-shown):invalid {
     border-color: $alarm-color;
   }
 
-  &__input:valid {
+  &__input:focus:not(:placeholder-shown):valid,
+  &__input:not(:focus):not(:placeholder-shown):valid {
     border-color: $dark-green;
   }
 
@@ -131,12 +129,12 @@
     border-radius: 30px;
     background-color: $button-green;
 
-    transition: /* Щось тут має бути */ $main-transition;
+    transition: border-color $main-transition;
 
     @include tablet {
       margin-left: 22px;
       margin-bottom: 0;
-      transition: /* Щось тут має бути */ $main-transition; // Точно треба?
+      transition: border-color $main-transition;
     }
 
     @include desktop {
@@ -163,7 +161,7 @@
   display: flex;
   left: 0;
   bottom: 0;
-position: absolute;
+  position: absolute;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.5;
@@ -173,10 +171,10 @@ position: absolute;
 
   transition: opacity $main-transition;
   @media screen and (min-width: 768px) {
-      bottom: -18px;
-    }
+    bottom: -18px;
+  }
 
-  .subscribe__input:focus:invalid + & {
+  .subscribe__input:focus:not(:placeholder-shown):invalid + & {
     opacity: 1;
   }
 
@@ -189,6 +187,6 @@ position: absolute;
 .alarm_svg {
   margin-right: 5px;
 }
-.subscribe__error{
+.subscribe__error {
   position: relative;
 }
