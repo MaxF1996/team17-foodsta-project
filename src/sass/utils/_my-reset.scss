@@ -55,7 +55,11 @@ label {
   user-select: none;
 }
 
-fieldset,
+fieldset {
+  padding: 0;
+  border: none;
+}
+
 textarea {
   padding: 0;
   margin: 0;
