@@ -143,9 +143,6 @@
 .subscribe__input--footer {
   @include tablet {
     margin-bottom: 0;
-  }
-
-  @include desktop {
     width: 279px;
   }
 }
