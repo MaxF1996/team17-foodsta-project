@@ -13,6 +13,7 @@
     background-image: none;
     padding-top: 0;
     background-color: $yellow-main;
+    margin-top: -1px;
   }
 
   @include desktop {
