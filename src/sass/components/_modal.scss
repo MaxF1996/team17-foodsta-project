@@ -12,45 +12,27 @@
     background-color: $backdrop-color;
 
     transition: transform $modal-transition;
-
-    @include tablet {
-        max-height: 720px;
-    }
 }
 
 .modal {
     position: absolute;
-    top: 60px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     overflow-y: auto;
 
     width: 100%;
-    max-width: 320px;
+    max-width: $modal-width-small;
     padding: 32px 20px;
 
     border-radius: 30px;
-
     background-color: $modal-bg-color;
 
     @media screen and (max-height: 520px) {
-        top: 5vh;
-        max-height: 90vh;
+        max-height: 95vh;
     }
-
     @include tablet {
-        @media screen and (max-height: 520px) {
-            top: 5vh;
-            height: 90vh;
-            max-width: 459px;
-
-            transform: translateX(-50%);
-        }
-
-        top: 50%;
-        max-width: 459px;
-
-        transform: translate(-50%, -50%);
+        max-width: $modal-width-big;
     }
 }
 
