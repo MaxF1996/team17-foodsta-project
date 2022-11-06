@@ -1,5 +1,8 @@
 .header__logo {
-    @include tablet {
-        margin-right: auto;
-    }
+  @include less-tablet {
+    margin: 10px 0;
+  }
+  @include tablet {
+    margin-right: auto;
+  }
 }
