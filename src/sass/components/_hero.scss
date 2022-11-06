@@ -30,7 +30,8 @@
     }
 
     @include desktop {
-      justify-content: space-between;
+      // justify-content: space-between;
+      column-gap: 152px;
       align-items: center;
     }
   }
@@ -60,7 +61,6 @@
 
   @include desktop {
     position: static;
-    margin-right: 16px;
   }
 }
 
