@@ -21,7 +21,7 @@
 
     &::after {
       content: '';
-      width: $desktop;
+      width: calc($desktop - (100vw - 100%));
       height: 100%;
 
       position: absolute;
